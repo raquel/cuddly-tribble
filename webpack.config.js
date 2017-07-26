@@ -1,15 +1,19 @@
-module.exports = {
-    entry: __dirname + "/app/js/app.js",
+const path = require('path');
+
+const config = {
+    entry: './src/index.js',
     output: {
-        filename: "app.js",
-        path: __dirname + "/dist",
+        path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js'
     },
-    // module: {
-    //     rules: [{ test: /\.(js|jsx)$/, use: 'babel-loader' }]
-    // },
-    resolve: {
-        alias: {
-            extensions: ['', '.js', '.jsx', '.json']
-        }
+    module: {
+        rules: [
+            {
+                use: 'babel-loader',
+                test: /\.js$/
+            },
+        ]
     },
 };
+
+module.exports = config;
