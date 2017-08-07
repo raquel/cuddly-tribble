@@ -35,13 +35,11 @@
     "webpack": "^3.4.1"
   },
   "dependencies": {
+    "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "rx": "^4.1.0",
     "single-spa": "^3.5.0",
     "single-spa-angular2": "^1.0.2",
     "single-spa-react": "^2.0.3"
-  },
-  "peerDependencies": {
-    "react": "^15.6.1"
   }
 }
